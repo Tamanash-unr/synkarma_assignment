@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.main {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timerContainer {
+  width: 100%;
+  flex-basis: 40%;
+  background-color: rgb(208, 208, 208);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.inputStyle {
+  font-size: 20px;
+  border-radius: 6px;
+  width: 30%;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formContainer > button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 30%;
+  font-size: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.timer {
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.countdownContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timerCountdown {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.countdownBtn {
+  font-size: 25px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.countdownBtn:hover {
+  color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
